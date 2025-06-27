@@ -1,6 +1,6 @@
 {
   "name": "array-train",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -8,9 +8,17 @@
     "src"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "coverage": "nyc npm test"
   },
   "devDependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "chai": "^5.2.0",
+    "mocha": "^11.7.1",
+    "nyc": "^17.1.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }
